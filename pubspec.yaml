@@ -1,0 +1,41 @@
+name: "spell_book"
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icon.png"
+  adaptive_icon_background: "#FFFFFF" 
+  adaptive_icon_foreground: "assets/app_icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/acid_splash.png
+    - assets/app_icon.png
+    - assets/fireball.png
+    - assets/minor_illusion.png
+    - assets/dice_roller.png
+    - assets/dice-d4.png
+    - assets/dice-d6.png
+    - assets/dice-d8.png
+    - assets/dice-d10.png
+    - assets/dice-d12.png
+    - assets/dice-d20.png
+
