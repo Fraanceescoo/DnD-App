@@ -20,4 +20,17 @@ final List<Spell> spellList = [
     imageUrl: 'assets/acid_splash.png',
     description: 'Someone ate kebab',
   ),
+  Spell(
+    id: '4',
+    name: 'Acido acidoso',
+    imageUrl: 'assets/minor_illusion.png',
+    description: 'Someone ate kebab',
+  ),
+  Spell(
+    id: '5',
+    name: 'Acido acidoso',
+    imageUrl: 'assets/acid_splash.png',
+    description: 'Someone ate kebab',
+  ),
+  
 ];

@@ -8,7 +8,11 @@ class DetailsScreen extends StatelessWidget {
     final Spell spell = ModalRoute.of(context)!.settings.arguments as Spell;
 
     return Scaffold(
-      appBar: AppBar(title: Text(spell.name)),
+      backgroundColor: Color.fromARGB(255, 188, 255, 234),
+      appBar: AppBar(
+        title: Text(spell.name),
+        backgroundColor: Color.fromARGB(255, 188, 255, 234),
+      ),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
@@ -27,7 +31,10 @@ class DetailsScreen extends StatelessWidget {
               const SizedBox(height: 24),
               Text(
                 spell.name,
-                style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 12),
@@ -39,6 +46,7 @@ class DetailsScreen extends StatelessWidget {
               const SizedBox(height: 40),
               ElevatedButton.icon(
                 onPressed: () => Navigator.pop(context),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 icon: const Icon(Icons.arrow_back),
                 label: const Text('Back'),
               ),

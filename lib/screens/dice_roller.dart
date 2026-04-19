@@ -14,8 +14,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 227, 255, 242),
-      appBar: AppBar(title: const Text('Dice Roller'), backgroundColor: Color.fromARGB(255, 188, 255, 234)),
+      backgroundColor: Color.fromARGB(255, 188, 255, 234),
+
+      appBar: AppBar(
+        title: const Text('Dice Roller'),
+        backgroundColor:Color.fromARGB(103, 59, 255, 193),
+
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +29,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Wrap(
               alignment: WrapAlignment.center,
               runSpacing: 15,
-              children: diceTypes.map((type) => _buildDiceButton(context, type)).toList(),
+              children: diceTypes
+                  .map((type) => _buildDiceButton(context, type))
+                  .toList(),
             ),
 
             const SizedBox(height: 60),
@@ -32,7 +39,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                
                 FloatingActionButton.small(
                   heroTag: "add",
                   onPressed: () {
@@ -41,11 +47,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     });
                   },
                   elevation: 4,
-                  backgroundColor: const Color.fromARGB(255, 188, 255, 234),
+                  backgroundColor: Color.fromARGB(255, 96, 255, 205),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(Icons.add, color: Color.fromARGB(255, 0, 0, 0)),
+                  child: const Icon(
+                    Icons.add,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
                 ),
 
                 const SizedBox(width: 25),
@@ -58,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
 
-                const SizedBox(width: 25), 
+                const SizedBox(width: 25),
 
                 FloatingActionButton.small(
                   heroTag: "remove",
@@ -72,11 +81,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     });
                   },
                   elevation: 4,
-                  backgroundColor: Color.fromARGB(255, 188, 255, 234),
+                  backgroundColor: Color.fromARGB(255, 96, 255, 205),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(Icons.remove, color: Color.fromARGB(255, 0, 0, 0)),
+                  child: const Icon(
+                    Icons.remove,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
                 ),
               ],
             ),
@@ -108,7 +120,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-
+}
   int launchDice(String type, int numDice) {
     int diceType = int.parse(type.replaceAll('d', ''));
     int sum = 0;
@@ -118,4 +130,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
     return sum;
   }
-}

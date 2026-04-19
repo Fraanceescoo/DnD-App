@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';    // Import HomeScreen
 import 'screens/details_screen.dart'; // Import DetailsScreen
-import 'screens/profile_screen.dart'; // Import ProfileScreen
+import 'screens/dice_roller.dart'; // Import ProfileScreen
 
 void main() => runApp(const MyApp()); // Add const for MyApp
 
